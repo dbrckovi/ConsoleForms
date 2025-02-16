@@ -1,0 +1,11 @@
+Control
+	- location
+	- size
+	- back color
+	- fore color
+
+ControlContaner : Control
+	- List<Control> Controls
+
+Form : ControlContainer
+	
