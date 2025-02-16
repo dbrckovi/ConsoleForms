@@ -1,5 +1,4 @@
-﻿using System.Text;
-using ConsoleFormsLib;
+﻿// using ConsoleFormsLib;
 
 namespace ConsoleFormsTest;
 
@@ -20,9 +19,22 @@ class Program
     Console.BackgroundColor = ConsoleColor.Black;
     Console.ForegroundColor = ConsoleColor.White;
     
-    PerformDiagnostic("Buffer size", new Action(() => { Console.Write($"{Console.BufferHeight}, {Console.BufferWidth}");} ));
-    PerformDiagnostic("Caps lock", new Action(() => { Console.Write($"{Console.CapsLock}");} ));
+    PerformDiagnostic("BufferHeight, BufferWidth", new Action(() => { Console.Write($"{Console.BufferHeight}, {Console.BufferWidth}");} ));
+    PerformDiagnostic("CapsLock", new Action(() => { Console.Write($"{Console.CapsLock}");} ));
     PerformDiagnostic("Beep", new Action(() => { Console.Beep(); } ));
+    PerformDiagnostic("CursorLeft", new Action(() => { Console.Write($"{Console.CursorLeft}");} ));
+    PerformDiagnostic("CursorTop", new Action(() => { Console.Write($"{Console.CursorTop}");} ));
+    PerformDiagnostic("CursorSize", new Action(() => { Console.Write($"{Console.CursorSize}");} ));
+    PerformDiagnostic("CursorVisible", new Action(() => { Console.Write($"{Console.CursorVisible}");} ));
+    PerformDiagnostic("GetCursorPosition", new Action(() => { Console.Write($"{Console.GetCursorPosition()}");} ));
+    PerformDiagnostic("InputEncoding", new Action(() => { Console.Write($"{Console.InputEncoding}");} ));
+
+
+
+
+
+
+
 
     // Console.WriteLine($"Caps lock: {Console.CapsLock}");
     // Console.WriteLine($"BufferWidth: {Console.BackgroundColor}");
